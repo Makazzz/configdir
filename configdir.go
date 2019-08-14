@@ -6,7 +6,7 @@ import (
 )
 
 // VERSION is the semantic version number of the configdir library.
-const VERSION = "0.1.0"
+const VERSION = "0.1.1"
 
 func init() {
 	findPaths()
