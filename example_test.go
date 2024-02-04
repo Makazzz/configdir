@@ -6,7 +6,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/20after4/configdir"
+	"github.com/Makazzz/configdir"
 )
 
 // Quick start example for a common use case of this module.

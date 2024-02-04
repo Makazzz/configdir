@@ -6,7 +6,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/20after4/configdir"
+	"github.com/Makazzz/configdir"
 )
 
 func reset() {

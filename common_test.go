@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/20after4/configdir"
+	"github.com/Makazzz/configdir"
 )
 
 // TestCase provides common inputs and outputs for the functions being tested.

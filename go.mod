@@ -1,1 +1,1 @@
-module github.com/20after4/configdir
+module github.com/Makazzz/configdir
