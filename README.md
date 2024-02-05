@@ -1,4 +1,4 @@
-# ConfigDir for Go and PortableApps.com
+# ConfigDir for Go and portable feature for Supersonic
 
 This library provides a cross platform means of detecting the system's
 configuration directories so that your Go app can store config files in a
@@ -14,19 +14,29 @@ application-specific namespacing.
 For the impatient, the directories this library can return tend to be like
 the following:
 
-|         | **System-wide Configuration**                         |
-|---------|-------------------------------------------------------|
-| Windows | `%PORTABLE_PROGRAMDATA%` or `Custom (relative) Path`  |
-| Linux   | `$XDG_CONFIG_DIRS` or `/etc/xdg`                      |
-| macOS   | `/Library/Application Support`                        |
-|         | **User-level Configuration**                          |
-| Windows | `%PORTABLE_APPDATA%` or `Custom (relative) Path`      |
-| Linux   | `$XDG_CONFIG_HOME` or `$HOME/.config`                 |
-| macOS   | `$HOME/Library/Application Support`                   |
-|         | **User-level Cache Folder**                           |
-| Windows | `%PORTABLE_LOCALAPPDATA%` or `Custom (relative) Path` |
-| Linux   | `$XDG_CACHE_HOME` or `$HOME/.cache`                   |
-| macOS   | `$HOME/Library/Caches`                                |
+|         | **System-wide Configuration**                       |
+|---------|-----------------------------------------------------|
+| Windows | `%PROGRAMDATA%` or `C:\ProgramData`                 |
+| Linux   | `$XDG_CONFIG_DIRS` or `/etc/xdg`                    |
+| macOS   | `/Library/Application Support`                      |
+|         | **User-level Configuration**                        |
+| Windows | `%APPDATA%` or `C:\Users\%USER%\AppData\Roaming`    |
+| Linux   | `$XDG_CONFIG_HOME` or `$HOME/.config`               |
+| macOS   | `$HOME/Library/Application Support`                 |
+|         | **User-level Cache Folder**                         |
+| Windows | `%LOCALAPPDATA%` or `C:\Users\%USER%\AppData\Local` |
+| Linux   | `$XDG_CACHE_HOME` or `$HOME/.cache`                 |
+| macOS   | `$HOME/Library/Caches`                              |
+
+For a portable Supersonic (if the env are not found, it will fallback to the original one):
+
+|         | **System-wide Configuration**                             |
+|---------|-----------------------------------------------------------|
+| Windows | `%SUPERSONIC_PROGRAMDATA_DIR%` or `Custom relative path`  |
+|         | **User-level Configuration**                              |
+| Windows | `%SUPERSONIC_APPDATA_DIR%` or `Custom relative path`      |
+|         | **User-level Cache Folder**                               |
+| Windows | `%SUPERSONIC_LOCALAPPDATA%_DIR` or `Custom relative path` |
 
 ## Quick Start
 
